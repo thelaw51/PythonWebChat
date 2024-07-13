@@ -22,4 +22,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
   document.getElementById('sendButton').onclick = sendMessage;
+
+  document.getElementById('messageInput').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        sendMessage();
+        e.preventDefault();
+    }
+});
 });
